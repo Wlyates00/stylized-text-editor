@@ -1,7 +1,6 @@
 # Text Editor
 
 ![Text Editor Screenshot](./images/main.png)
-Example of the text editor in action.
 
 ## Overview
 This is a simple yet powerful text editor built using Java Swing. It supports basic text editing features, such as bold, underline, bullet points, text color, and highlighting. Additionally, it allows users to insert images into the document and save/load files in both plain text and RTF formats.
@@ -62,11 +61,9 @@ To run the text editor, follow these steps:
 
 ### Main Interface
 ![Main Interface](./images/snip1.png)
-The main interface of the text editor.
 
 ### Inserting Symbols
 ![Styled Text](./images/symbols.png)
-A screenshot of some of the symbols included.
 
 ## How to Add Images to the README
 
