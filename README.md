@@ -65,27 +65,8 @@ To run the text editor, follow these steps:
 ### Inserting Symbols
 ![Styled Text](./images/symbols.png)
 
-## How to Add Images to the README
-
-To include images in your README file:
-
-1. **Create an images folder in your project directory.**
-2. Add your images (e.g., `text-editor-screenshot.png`) to the images folder.
-3. Use the following Markdown syntax to embed images in the README:
-
-   ```
-   ![Alt Text](./images/filename.png)
-   ```
-
-   Example:
-
-   ```
-   ![Text Editor Screenshot](./images/text-editor-screenshot.png)
-   ```
-
 ## Dependencies
 - **Java Swing**: The project uses Java Swing for the graphical user interface.
 - **Java AWT**: Used for color selection and basic graphics.
-
 
 Enjoy using the text editor! 🚀
