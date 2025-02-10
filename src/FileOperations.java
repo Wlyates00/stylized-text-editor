@@ -95,6 +95,9 @@ public class FileOperations {
                 if (file.getName().endsWith(".rtf")) {
                     RTFEditorKit rtfKit = new RTFEditorKit();
                     rtfKit.read(fis, textPane.getDocument(), 0); // Read RTF content
+
+                    // Manually apply highlight color after reading
+                    applyHighlights(textPane.getStyledDocument());
                 } else {
                     byte[] buffer = new byte[(int) file.length()];
                     fis.read(buffer);
@@ -159,6 +162,30 @@ public class FileOperations {
             }
         } catch (IOException | BadLocationException e) {
             JOptionPane.showMessageDialog(parent, "Failed to save file: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    /**
+     * Manually apply the highlight color after loading RTF content.
+     * 
+     * @param doc the current styled document
+     */
+    private void applyHighlights(StyledDocument doc) {
+        for (int i = 0; i < doc.getLength(); i++) {
+            AttributeSet attributes = doc.getCharacterElement(i).getAttributes();
+            Color backgroundColor = (Color) attributes.getAttribute(StyleConstants.Background);
+
+            if (backgroundColor != null && !backgroundColor.equals(Color.BLACK)) {
+                // If the highlight is not black, change it to your desired color
+                MutableAttributeSet newAttributes = new SimpleAttributeSet();
+                StyleConstants.setBackground(newAttributes, backgroundColor);
+                doc.setCharacterAttributes(i, 1, newAttributes, false);
+            } else {
+                // If it's black, you can reset it or change it to another color (like yellow)
+                MutableAttributeSet newAttributes = new SimpleAttributeSet();
+                StyleConstants.setBackground(newAttributes, Color.WHITE); // Change this to your desired color
+                doc.setCharacterAttributes(i, 1, newAttributes, false);
+            }
         }
     }
 }
