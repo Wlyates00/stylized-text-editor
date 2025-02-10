@@ -3,7 +3,7 @@
 ![Text Editor Screenshot](./images/main.png)
 
 ## Overview
-This is a simple yet powerful text editor built using Java Swing. It supports basic text editing features, such as bold, underline, bullet points, text color, and highlighting. Additionally, it allows users to insert images into the document and save/load files in both plain text and RTF formats.
+This is a simple yet powerful text editor built using Java Swing. It supports basic text editing features, such as bold, underline, bullet points, text color, and highlighting. Additionally, it allows users to  save/load files in both plain text and RTF formats.
 
 ## Features
 
